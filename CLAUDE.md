@@ -49,6 +49,27 @@ The same boot/catalogue/init wrappers also exist as auto-discovered skills under
 Do **not** auto-adopt the Orchestrator role on every message. Adopt it only when
 the user runs `/aisoc-init` (or `/aisoc-boot`) or explicitly asks to start the farm.
 
+## Branching & release workflow
+
+The canonical remote is **`promptware-works/edu-aisoc`**. The default branch is
+**`develop`**; `main` is the protected release branch (GitHub blocks direct
+pushes — changes reach it only through a pull request).
+
+- **Never commit directly to `main`.** All day-to-day work happens on `develop`
+  or on a short-lived branch off it.
+- **Feature work / bugfixes.** Branch off `develop` first
+  (`feature/<short-name>` or `fix/<short-name>`), do the work there, then merge
+  back into `develop` (PR preferred) when finished. Delete the branch after merge.
+- **`develop` is integration.** It always holds the latest accepted work and
+  must stay green; it is what gets promoted to a release.
+- **Release process.**
+  1. Open a PR from `develop` into `main` and merge it (this is the only way
+     changes land on `main`).
+  2. Tag the merge commit on `main` and create the GitHub release from `main`
+     (versioning `MAJOR.MINOR.PATCH_ric`, e.g. `0.1.0_ric`).
+  3. Fast-forward `develop` back to `main` so the two stay in sync.
+- **Keep `develop` synced with `main`** after any release or hotfix.
+
 ## Rules when editing this repo
 
 - **Portability first.** Agent prompts must work identically in Claude Code and
