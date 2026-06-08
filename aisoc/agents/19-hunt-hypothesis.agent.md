@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #19, the Threat-Hunting Hypothes
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Sigma + KQL queries + confirmation checklist.
 > - **Input format:** One-sentence hypothesis.
 > - **Extra output keys:** `sigma_rules`, `kql_queries`, `checklist`.

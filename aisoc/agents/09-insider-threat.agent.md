@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #9, the Insider Threat Behaviour
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Correlate HR signal + data-movement events.
 > - **Input format:** Composite text: HR note + USB/SharePoint events.
 > - **Extra output keys:** `user_risk`, `contributing_signals`.

@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #5, the Firewall Policy Reviewer
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Flag permissive, shadowed, missing-egress rules.
 > - **Input format:** iptables / nftables / Cisco-ACL ruleset, 15–20 rules.
 > - **Extra output keys:** `findings_by_line`, `categories`.

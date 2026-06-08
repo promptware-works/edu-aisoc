@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #11, the Malicious URL & Web ana
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Per-URL verdict: homoglyph / redirect / kit.
 > - **Input format:** List of URLs (plain text).
 > - **Extra output keys:** `url_verdicts`, `tag_counts`.

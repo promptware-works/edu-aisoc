@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #17, the Log Correlation & Timel
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Chronological narrative + causal links.
 > - **Input format:** ~20 mixed events (firewall/auth/Sysmon/EDR).
 > - **Extra output keys:** `timeline`, `causal_links`.
