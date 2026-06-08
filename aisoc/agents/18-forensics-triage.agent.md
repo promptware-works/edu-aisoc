@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #18, the Digital Forensics Triag
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Key indicators + next-acquisition steps.
 > - **Input format:** Disk + memory artefact summary.
 > - **Extra output keys:** `key_indicators`, `next_acquisitions`.

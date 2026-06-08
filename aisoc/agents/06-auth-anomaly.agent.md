@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #6, the Authentication Anomaly a
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** UEBA on auth logs: impossible travel, brute force, off-hours.
 > - **Input format:** CSV: `timestamp,user,src_ip,geo,result,mfa_status`.
 > - **Extra output keys:** `anomaly_types`, `user_risk`.

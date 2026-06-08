@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #4, the TLS / Certificate Inspec
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Analyze certs and JA3 for C2/expired/mismatched.
 > - **Input format:** Openssl-style cert dumps + optional JA3 hashes.
 > - **Extra output keys:** `cert_verdicts`, `mismatch_fields`.

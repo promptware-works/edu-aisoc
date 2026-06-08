@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #20, the Executive Briefing. Pro
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Non-technical four-section summary.
 > - **Input format:** Consolidated finding object.
 > - **Extra output keys:** `exec_sections` (What happened / Impact / What we did / What we ask).

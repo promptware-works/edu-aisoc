@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #13, the OSINT / Threat-Intel En
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Structure enrichment from a pasted intel corpus.
 > - **Input format:** One IoC + 1-page intel snippet.
 > - **Extra output keys:** `actor`, `campaign`, `attack_techniques`, `source_quote`.
