@@ -28,9 +28,9 @@ environments:
 A prompt that works in only one is considered incomplete. The agent prompts
 themselves are plain markdown and depend only on natural-language conventions —
 never on vendor features. The files under `.claude/` and `.github/` are **thin
-invocation wrappers only**: they load the canonical prompts under `.aisoc/` and
+invocation wrappers only**: they load the canonical prompts under `aisoc/` and
 must never change agent behaviour. **The canonical source of truth is always
-`.aisoc/`.**
+`aisoc/`.**
 
 ---
 
@@ -43,14 +43,14 @@ and paste each agent when it is dispatched.
 ### Manual boot (works everywhere — the canonical flow)
 
 1. Open this repository in your IDE and start a fresh chat session.
-2. Paste the body of [`.aisoc/skills/boot/SKILL.md`](.aisoc/skills/boot/SKILL.md).
+2. Paste the body of [`aisoc/skills/boot/SKILL.md`](aisoc/skills/boot/SKILL.md).
    The assistant replies: `AISOC Farm boot loaded — waiting for catalogue.`
-3. Paste the body of [`.aisoc/skills/catalogue/SKILL.md`](.aisoc/skills/catalogue/SKILL.md).
+3. Paste the body of [`aisoc/skills/catalogue/SKILL.md`](aisoc/skills/catalogue/SKILL.md).
    It replies: `Catalogue registered, 20 agents available — ready for scenario.`
-4. Paste a scenario, e.g. [`.aisoc/scenarios/01-beaconing.md`](.aisoc/scenarios/01-beaconing.md).
+4. Paste a scenario, e.g. [`aisoc/scenarios/01-beaconing.md`](aisoc/scenarios/01-beaconing.md).
 5. Review the Orchestrator's **PLAN** and reply `approve` / `revise <text>` / `abort`.
 6. When an agent is dispatched, paste the matching
-   `.aisoc/agents/NN-<name>.agent.md` file plus the requested input block.
+   `aisoc/agents/NN-<name>.agent.md` file plus the requested input block.
 
 ### Claude Code (convenience wrappers)
 
@@ -81,14 +81,14 @@ intent than type a slash command.
   [`.github/chatmodes/aisoc-orchestrator.chatmode.md`](.github/chatmodes/aisoc-orchestrator.chatmode.md).
 
 > Wrappers are sugar, not requirements. If a wrapper ever disagrees with the
-> file it loads, the file under `.aisoc/` wins.
+> file it loads, the file under `aisoc/` wins.
 
 ---
 
 ## Repository layout
 
 ```text
-.aisoc/                              # Canonical source of truth (vendor-neutral)
+aisoc/                              # Canonical source of truth (vendor-neutral)
 ├── agents/                          # Orchestrator reference + 20 catalogue agents + RICTOC template
 │   ├── aisoc-orchestrator.agent.md  #   reference RICTOC for the Orchestrator role
 │   ├── _rictoc-template.agent.md    #   blank skeleton — copy this to start your agent
@@ -112,7 +112,7 @@ intent than type a slash command.
 ```
 
 Start with the proposal:
-[`.aisoc/docs/project-proposal/proposal.md`](.aisoc/docs/project-proposal/proposal.md).
+[`aisoc/docs/project-proposal/proposal.md`](aisoc/docs/project-proposal/proposal.md).
 
 ---
 
@@ -121,10 +121,10 @@ Start with the proposal:
 Every agent prompt is authored with six labelled sections —
 **R**ole, **I**nput, **C**ontext, **T**ask, **O**utput, **C**onstraints. Copy
 the skeleton at
-[`.aisoc/agents/_rictoc-template.agent.md`](.aisoc/agents/_rictoc-template.agent.md)
+[`aisoc/agents/_rictoc-template.agent.md`](aisoc/agents/_rictoc-template.agent.md)
 and study the worked example at
-[`.aisoc/agents/03-dns-sentinel.agent.md`](.aisoc/agents/03-dns-sentinel.agent.md).
+[`aisoc/agents/03-dns-sentinel.agent.md`](aisoc/agents/03-dns-sentinel.agent.md).
 
 Every agent returns a single JSON object with the shared eight keys defined in
-[`.aisoc/schema/finding.json`](.aisoc/schema/finding.json): `agent`, `summary`,
+[`aisoc/schema/finding.json`](aisoc/schema/finding.json): `agent`, `summary`,
 `severity`, `confidence`, `evidence`, `attck`, `recommendation`, `rationale`.

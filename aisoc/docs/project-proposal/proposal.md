@@ -151,7 +151,7 @@ are the same thing, which calls for an explicit policy:
    "active" action re-enters a second Plan-and-Approve cycle.
 
 **Operator vocabulary.** The Orchestrator must accept the full vocabulary
-defined in [`.aisoc/skills/boot/SKILL.md`](../../skills/boot/SKILL.md)
+defined in [`aisoc/skills/boot/SKILL.md`](../../skills/boot/SKILL.md)
 Block 3 at any point — not only `approve / revise / abort`:
 
 | Command | Effect |
@@ -206,7 +206,7 @@ into a fresh chat session.
 #### Repository layout (provided by the instructor)
 
 ```text
-.aisoc/
+aisoc/
 ├── agents/                              # 22 agent prompts (orchestrator + 20 catalogue + room to grow)
 │   ├── aisoc-orchestrator.agent.md      # RICTOC reference for the Orchestrator role
 │   ├── 01-traffic-analyzer.agent.md     # one per catalogue entry
@@ -232,7 +232,7 @@ into a fresh chat session.
     └── architecture/                    # Reserved for standalone architecture documents
 ```
 
-> **Two scenario sets.** `.aisoc/scenarios/` holds *farm-level
+> **Two scenario sets.** `aisoc/scenarios/` holds *farm-level
 > multi-agent* reference scenarios — used by the instructor for
 > cross-cohort grading and the final farm walk-through. Students
 > additionally produce *per-agent edge-case* scenarios in their own
@@ -241,25 +241,25 @@ into a fresh chat session.
 > duplicates.
 >
 > **RICTOC template.** A blank skeleton lives at
-> [`.aisoc/agents/_rictoc-template.agent.md`](../../agents/_rictoc-template.agent.md).
+> [`aisoc/agents/_rictoc-template.agent.md`](../../agents/_rictoc-template.agent.md).
 > Copy it when you start your own agent (see § 4).
 
 #### Symmetric initialization procedure (works in both environments)
 
 1. Open the repository in the IDE (VS Code for Copilot, or Claude Code).
 2. Start a fresh chat session.
-3. Paste the body of `.aisoc/skills/boot/SKILL.md` followed by the body of
-   `.aisoc/skills/catalogue/SKILL.md` into the chat. The boot skill
+3. Paste the body of `aisoc/skills/boot/SKILL.md` followed by the body of
+   `aisoc/skills/catalogue/SKILL.md` into the chat. The boot skill
    instructs the assistant to adopt the **Orchestrator** role and announce
    readiness; the catalogue skill registers the 20 agents. (The YAML
    frontmatter at the top of each SKILL.md is metadata for the skill
    system and may be included or trimmed — the assistant ignores it.)
-4. Paste the contents of `.aisoc/scenarios/<n>.md` (or any new scenario)
+4. Paste the contents of `aisoc/scenarios/<n>.md` (or any new scenario)
    as the operator request.
 5. The Orchestrator produces a numbered **Plan** and waits for the operator
    to type `approve` / `revise` / `abort`.
 6. On approval, the operator pastes each required agent's
-   `.aisoc/agents/<NN>-<short-name>.agent.md` into the chat as the
+   `aisoc/agents/<NN>-<short-name>.agent.md` into the chat as the
    Orchestrator dispatches it, together with the input data the
    Orchestrator requested. The agent returns a finding object; the
    Orchestrator collects findings and produces the consolidated report.
@@ -272,8 +272,8 @@ This paste-driven flow uses only **chat-as-runtime** — no MCP, no
 - **Claude Code:** the same prompts may also be exposed as sub-agents in
   `.claude/agents/<name>.md` or as slash commands in
   `.claude/commands/<name>.md`. The wrapper file simply loads the underlying
-  `.aisoc/agents/<NN>-<short-name>.agent.md`; it must not modify it. The
-  canonical source of truth always remains the file under `.aisoc/`.
+  `aisoc/agents/<NN>-<short-name>.agent.md`; it must not modify it. The
+  canonical source of truth always remains the file under `aisoc/`.
 - **GitHub Copilot Chat:** the boot prompt may be placed in
   `.github/copilot-instructions.md` so the assistant adopts the Orchestrator
   role automatically when the workspace is opened. Individual agent prompts
@@ -298,20 +298,20 @@ compressed 3-week variant) is fixed by [`delivery-plan.md`](./delivery-plan.md).
      and Copilot Chat extensions; sign in with a GitHub account that
      has Copilot access. The cohort license is provided by the
      instructor — see the classroom announcement.
-2. **Clone the course repository** and confirm `.aisoc/` is visible at
+2. **Clone the course repository** and confirm `aisoc/` is visible at
    its root.
 3. **Verify the boot sequence in Claude Code.** Open a fresh `claude`
-   session. Paste the body of `.aisoc/skills/boot/SKILL.md`. The
+   session. Paste the body of `aisoc/skills/boot/SKILL.md`. The
    assistant must reply *"AISOC Farm boot loaded — waiting for
-   catalogue."* Paste `.aisoc/skills/catalogue/SKILL.md`. The assistant
+   catalogue."* Paste `aisoc/skills/catalogue/SKILL.md`. The assistant
    must reply *"Catalogue registered, 20 agents available — ready for
    scenario."* If either reply differs, capture the transcript and
    bring it to office hours.
 4. **Repeat step 3 in Copilot Chat.** Expected replies are identical.
 5. **Run the worked example end-to-end** in each environment. Paste
-   `.aisoc/scenarios/01-beaconing.md`; follow the Orchestrator's PLAN;
+   `aisoc/scenarios/01-beaconing.md`; follow the Orchestrator's PLAN;
    when it dispatches Agent #3, paste
-   `.aisoc/agents/03-dns-sentinel.agent.md` followed by the DNS-query
+   `aisoc/agents/03-dns-sentinel.agent.md` followed by the DNS-query
    block from the scenario. Confirm you receive a finding object with
    the eight shared keys. Save the transcript.
 
@@ -337,11 +337,11 @@ Every agent prompt is authored using exactly these six labelled sections:
 | **C** | **Constraints** | Guardrails: what *not* to do, false-positive policy, HITL requirements, refusal conditions, explainability requirement. |
 
 A reusable RICTOC skeleton lives at
-[`.aisoc/agents/_rictoc-template.agent.md`](../../agents/_rictoc-template.agent.md).
-Copy it, save the result as `.aisoc/agents/<NN>-<short-name>.agent.md`,
+[`aisoc/agents/_rictoc-template.agent.md`](../../agents/_rictoc-template.agent.md).
+Copy it, save the result as `aisoc/agents/<NN>-<short-name>.agent.md`,
 and fill in every section — remove the author-instruction blockquotes
 when you do. The single complete worked example is
-[`.aisoc/agents/03-dns-sentinel.agent.md`](../../agents/03-dns-sentinel.agent.md);
+[`aisoc/agents/03-dns-sentinel.agent.md`](../../agents/03-dns-sentinel.agent.md);
 consult it whenever the template is ambiguous.
 
 ---
@@ -358,7 +358,7 @@ plan ship today) and follow its schedule.
 
 | Phase | Name | Core deliverable |
 | --- | --- | --- |
-| **P1** | **Specification & First Prompt** | Signed-off 1-page Agent Specification (`spec.md`); the **v1 RICTOC prompt** in `.aisoc/agents/<NN>-<short-name>.agent.md` (replaces the instructor stub); personal positive/negative (and, time permitting, ambiguous) test scenarios under `tests/<NN>-scenarios/`. |
+| **P1** | **Specification & First Prompt** | Signed-off 1-page Agent Specification (`spec.md`); the **v1 RICTOC prompt** in `aisoc/agents/<NN>-<short-name>.agent.md` (replaces the instructor stub); personal positive/negative (and, time permitting, ambiguous) test scenarios under `tests/<NN>-scenarios/`. |
 | **P2** | **Cross-Environment Testing & Hardening** | The **v2 hardened prompt**; paired Copilot Chat / Claude Code transcripts per scenario in `tests/<NN>-…/`; an evaluation note (consistency, weaknesses, prompt-injection resistance); the per-agent Pass checks from [`test-worksheet.md`](./test-worksheet.md) marked for both environments. The agent must be schema-compliant and materially consistent across both environments (see § 3.3) and resist prompt injection in pasted logs; add an **agent-internal self-check** step. |
 | **P3** | **Farm Integration & Defense** | The **v3 final prompt** committed to the shared repo; a `report.md` (design, RICTOC walk-through, test results, integration evidence, ATT&CK mapping, ethics & limitations); participation in the instructor-run scenario walk-through where the Orchestrator plans, gets approval, calls agents, and produces the final report; and a live **defense** of the agent's design, trade-offs, and cross-environment behaviour. The output must be parseable by at least one peer agent. |
 
@@ -410,7 +410,7 @@ function. For deeper detail, the **authoritative artefacts** for every
 agent are:
 
 - **Runtime contract** — input format and agent-specific output keys —
-  in [`.aisoc/skills/catalogue/SKILL.md`](../../skills/catalogue/SKILL.md).
+  in [`aisoc/skills/catalogue/SKILL.md`](../../skills/catalogue/SKILL.md).
 - **Test inputs and pass conditions** — what each agent must
   demonstrate at the testing-phase sign-off — in
   [`./test-worksheet.md`](./test-worksheet.md).
@@ -440,7 +440,7 @@ agent are:
 
 > **Orchestrator note.** The Orchestrator prompt is provided by the
 > instructor as a reference at
-> [`.aisoc/agents/aisoc-orchestrator.agent.md`](../../agents/aisoc-orchestrator.agent.md);
+> [`aisoc/agents/aisoc-orchestrator.agent.md`](../../agents/aisoc-orchestrator.agent.md);
 > no student sits on the critical path of the whole farm. An advanced
 > student may *additionally* propose an alternative Orchestrator as an
 > extension — graded separately.

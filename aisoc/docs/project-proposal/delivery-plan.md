@@ -94,10 +94,10 @@ be flagged in office hours so the instructor can adjust.
 #### Deliverables (end of Week 2)
 
 - Signed-off Agent Specification (`spec.md`).
-- `.aisoc/agents/<NN>-<short-name>.agent.md` containing the RICTOC v1 prompt
+- `aisoc/agents/<NN>-<short-name>.agent.md` containing the RICTOC v1 prompt
   (replaces the stub shipped by the instructor).
 - 3 personal test scenarios under `tests/<NN>-scenarios/` (additive to the
-  shared `.aisoc/scenarios/` reference set).
+  shared `aisoc/scenarios/` reference set).
 
 **Assessment weight:** 20%
 
@@ -118,7 +118,7 @@ be flagged in office hours so the instructor can adjust.
 
 #### Deliverables (end of Week 4)
 
-- `.aisoc/agents/<NN>-<short-name>.agent.md` v2 (hardened prompt).
+- `aisoc/agents/<NN>-<short-name>.agent.md` v2 (hardened prompt).
 - `tests/<NN>-…/` folder with paired Copilot / Claude Code transcripts per
   scenario.
 - Short evaluation note (≤ 2 pages): consistency observations, weaknesses,
@@ -144,7 +144,7 @@ be flagged in office hours so the instructor can adjust.
 
 #### Deliverables (end of Week 6)
 
-- Final `.aisoc/agents/<NN>-<short-name>.agent.md` (v3) committed to the
+- Final `aisoc/agents/<NN>-<short-name>.agent.md` (v3) committed to the
   shared repository of prompts.
 - Final 4–6 page report (`report.md`) covering: design, RICTOC walk-through,
   test results, integration evidence, ATT&CK mapping, ethics & limitations.
@@ -204,10 +204,10 @@ adjust.
 #### Week 1 checkpoint (end of Week 1)
 
 - Signed-off Agent Specification (`spec.md`).
-- `.aisoc/agents/<NN>-<short-name>.agent.md` containing the RICTOC v1
+- `aisoc/agents/<NN>-<short-name>.agent.md` containing the RICTOC v1
   prompt (replaces the stub shipped by the instructor).
 - 2 personal test scenarios under `tests/<NN>-scenarios/` (additive to
-  the shared `.aisoc/scenarios/` reference set).
+  the shared `aisoc/scenarios/` reference set).
 - One run of the v1 prompt against the worked-example scenario, in
   **at least one** of the two target environments, with the transcript
   committed to the PR.
@@ -239,7 +239,7 @@ adjust.
 
 #### Week 2 checkpoint (end of Week 2)
 
-- `.aisoc/agents/<NN>-<short-name>.agent.md` v2 (hardened prompt).
+- `aisoc/agents/<NN>-<short-name>.agent.md` v2 (hardened prompt).
 - `tests/<NN>-…/` folder with paired Copilot / Claude Code transcripts
   per scenario (at least two scenarios, four transcripts total).
 - A **1-page evaluation note** (not 2): consistency observations,
@@ -266,7 +266,7 @@ adjust.
 
 #### Final deliverables (end of Week 3)
 
-- Final `.aisoc/agents/<NN>-<short-name>.agent.md` (v3) committed to
+- Final `aisoc/agents/<NN>-<short-name>.agent.md` (v3) committed to
   the shared repository of prompts via the merged PR.
 - A **2–3 page report** (`report.md`) covering: design,
   RICTOC walk-through, test results, peer-pairing evidence, ATT&CK

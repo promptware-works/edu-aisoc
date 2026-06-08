@@ -17,7 +17,7 @@ grouped by topic; within each group entries are alphabetical.
 | **AISOC** | AI Security Operations Center — the in-chat multi-agent farm defined by this project. |
 | **Agent (in this project)** | A single prompt-defined specialist, authored using RICTOC, that performs one well-scoped security function. |
 | **Finding** | The shared 8-key JSON object every agent returns (`agent`, `summary`, `severity`, `confidence`, `evidence`, `attck`, `recommendation`, `rationale`). |
-| **Finding schema** | The JSON Schema at `.aisoc/schema/finding.json` that all findings must validate against. |
+| **Finding schema** | The JSON Schema at `aisoc/schema/finding.json` that all findings must validate against. |
 | **Farm** | The full set of agents plus the Orchestrator, operating together in one chat session. |
 | **Operator** | The human SOC user (student, instructor, or grader) driving the chat session. |
 | **Orchestrator** | The control agent that runs PLAN → APPROVE → EXECUTE and consolidates findings. |
@@ -84,7 +84,7 @@ grouped by topic; within each group entries are alphabetical.
 | **`eve.json`** | Suricata's JSON event-log format (Agent #2). |
 | **iptables / nftables** | Linux firewall rule formats (Agent #5). |
 | **JSON** | JavaScript Object Notation — primary structured-data format for findings and many inputs. |
-| **JSON Schema** | The metalanguage used by `.aisoc/schema/finding.json` (draft 2020-12). |
+| **JSON Schema** | The metalanguage used by `aisoc/schema/finding.json` (draft 2020-12). |
 | **Nessus / OpenVAS** | Vulnerability-scanner products whose report formats feed Agent #14. |
 | **TSV** | Tab-Separated Values — text tabular format used for Zeek `conn.log` (Agent #1). |
 | **YAML** | YAML Ain't Markup Language — used for SKILL.md frontmatter and Sigma rules (Agent #19). |
@@ -138,7 +138,7 @@ Used in the `severity` field of every finding (worksheet check U2):
 
 ## G. Operator command vocabulary
 
-Defined in `.aisoc/skills/boot/SKILL.md` Block 3 and used in the
+Defined in `aisoc/skills/boot/SKILL.md` Block 3 and used in the
 Orchestrator chat loop:
 
 | Command | Short | Effect |

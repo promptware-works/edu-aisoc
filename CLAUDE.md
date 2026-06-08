@@ -7,20 +7,20 @@ markdown prompt files. Treat them as software: precise, versioned, reviewable.
 
 ## What lives where
 
-- **Canonical source of truth: `.aisoc/`.** Everything the farm needs is here.
-  - `.aisoc/skills/boot/SKILL.md` — the boot prompt (pasted first).
-  - `.aisoc/skills/catalogue/SKILL.md` — the 20-agent registry (pasted second).
-  - `.aisoc/agents/NN-<name>.agent.md` — one RICTOC prompt per catalogue agent.
+- **Canonical source of truth: `aisoc/`.** Everything the farm needs is here.
+  - `aisoc/skills/boot/SKILL.md` — the boot prompt (pasted first).
+  - `aisoc/skills/catalogue/SKILL.md` — the 20-agent registry (pasted second).
+  - `aisoc/agents/NN-<name>.agent.md` — one RICTOC prompt per catalogue agent.
     `03-dns-sentinel.agent.md` is the complete worked example; `_rictoc-template.agent.md`
     is the blank skeleton.
-  - `.aisoc/agents/aisoc-orchestrator.agent.md` — reference RICTOC for the Orchestrator role.
-  - `.aisoc/schema/finding.json` — the shared 8-key finding schema all agents emit.
-  - `.aisoc/scenarios/` — reference scenarios for end-to-end testing.
-  - `.aisoc/docs/project-proposal/` — the timeline-neutral `proposal.md`, the
+  - `aisoc/agents/aisoc-orchestrator.agent.md` — reference RICTOC for the Orchestrator role.
+  - `aisoc/schema/finding.json` — the shared 8-key finding schema all agents emit.
+  - `aisoc/scenarios/` — reference scenarios for end-to-end testing.
+  - `aisoc/docs/project-proposal/` — the timeline-neutral `proposal.md`, the
     `delivery-plan.md` (selectable 3-week / 6-week schedules), `test-worksheet.md`,
     and `glossary.md`.
 - **Wrappers (sugar only): `.claude/` and `.github/`.** These load the canonical
-  `.aisoc/` files. They must never alter agent behaviour.
+  `aisoc/` files. They must never alter agent behaviour.
 
 ## How the farm runs (Plan → Approve → Execute)
 
@@ -32,7 +32,7 @@ mutations during operation — only chat text.
 3. The operator pastes a scenario.
 4. The Orchestrator emits a numbered **PLAN** and waits for `approve` / `revise <text>` / `abort`.
 5. On approval it **dispatches** agents one at a time; the operator pastes each
-   agent's `.aisoc/agents/NN-<name>.agent.md` plus the requested input.
+   agent's `aisoc/agents/NN-<name>.agent.md` plus the requested input.
 6. The Orchestrator validates each finding against the 8-key schema and finally
    produces a consolidated **REPORT**.
 
@@ -53,10 +53,10 @@ the user runs `/aisoc-init` (or `/aisoc-boot`) or explicitly asks to start the f
 
 - **Portability first.** Agent prompts must work identically in Claude Code and
   GitHub Copilot Chat. Never add Claude-only features (sub-agent runtime, MCP,
-  slash-command args, file-tool semantics) *inside* an `.aisoc/agents/*` prompt.
+  slash-command args, file-tool semantics) *inside* an `aisoc/agents/*` prompt.
 - **Wrappers stay thin.** Files under `.claude/` and `.github/` may only *load*
-  the canonical prompt. If a wrapper and the `.aisoc/` file ever disagree, the
-  `.aisoc/` file wins.
+  the canonical prompt. If a wrapper and the `aisoc/` file ever disagree, the
+  `aisoc/` file wins.
 - **Schema discipline.** Every finding carries the eight shared keys. Active
   responses (block, isolate, push rule, quarantine) stay
   `recommendation_status: proposed` until a second Plan-and-Approve cycle.
@@ -66,4 +66,4 @@ the user runs `/aisoc-init` (or `/aisoc-boot`) or explicitly asks to start the f
   alphabetical sort matches dispatch order.
 
 When in doubt about any behaviour, read
-[.aisoc/docs/project-proposal/proposal.md](.aisoc/docs/project-proposal/proposal.md).
+[aisoc/docs/project-proposal/proposal.md](aisoc/docs/project-proposal/proposal.md).

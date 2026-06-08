@@ -15,8 +15,8 @@ paste a scenario.
 
 --- BOOT SKILL ---
 
-@.aisoc/skills/boot/SKILL.md
+@aisoc/skills/boot/SKILL.md
 
 --- AGENT CATALOGUE ---
 
-@.aisoc/skills/catalogue/SKILL.md
+@aisoc/skills/catalogue/SKILL.md
