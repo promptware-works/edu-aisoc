@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #16, the Incident Triage. Consol
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Consolidate peer findings; assign severity; propose playbook.
 > - **Input format:** 3–5 mock findings (shared schema) + scenario text.
 > - **Extra output keys:** `playbook`, `dedup_evidence`.

@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #14, the Vuln Scanner Output Ana
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Deduplicate + prioritize remediation.
 > - **Input format:** Nessus/OpenVAS-style CSV/JSON, 10–15 findings.
 > - **Extra output keys:** `top_priorities`, `suppressed_fps`.

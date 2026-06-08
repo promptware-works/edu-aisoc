@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #12, the Attachment Triage. Risk
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Risk score from filename/hash/mime/macro.
 > - **Input format:** JSON list of attachments.
 > - **Extra output keys:** `attachment_scores`, `reasons`.

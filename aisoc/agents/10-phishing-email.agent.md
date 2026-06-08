@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #10, the Phishing Email Analyst.
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Phishing score, IoC extraction, BEC tells.
 > - **Input format:** Raw `.eml`-style headers + body.
 > - **Extra output keys:** `per_message`, `iocs`, `bec_tells`.

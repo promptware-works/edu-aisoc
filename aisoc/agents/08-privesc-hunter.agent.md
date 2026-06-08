@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #8, the Privilege Escalation Hun
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Token manipulation, sudo abuse, group drift.
 > - **Input format:** Windows Security 4672/4673 + Linux sudo log + group-add events.
 > - **Extra output keys:** `escalation_events`, `attack_subtechniques`.

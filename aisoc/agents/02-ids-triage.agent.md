@@ -9,7 +9,7 @@ description: RICTOC prompt for AISOC Farm Agent #2, the Signature IDS Triage. De
 >
 > **Worked example to follow:** [03-dns-sentinel.agent.md](03-dns-sentinel.agent.md).
 >
-> **Catalogue entry** (from [`../skills/catalogue.md`](../skills/catalogue.md)):
+> **Catalogue entry** (from [`../skills/catalogue/SKILL.md`](../skills/catalogue/SKILL.md)):
 > - **Scope:** Deduplicate & rate IDS alerts; separate likely TP/FP.
 > - **Input format:** Suricata `eve.json` array, 10–15 alerts.
 > - **Extra output keys:** `dedup_count`, `tp_sids`, `fp_sids`.
