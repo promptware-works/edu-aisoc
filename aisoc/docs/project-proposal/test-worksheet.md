@@ -27,6 +27,11 @@ agent they own, and give graders an identical checklist to score against.
   *both* GitHub Copilot Chat and Claude Code; attach the two transcripts.
 - **Bring it to the integration & defense session.** The signed worksheet is
   the entry ticket for the farm-integration walk-through and the defense.
+- **Self-check your prompt before submitting.** Paste your candidate agent
+  with the advisory **Governance Reviewer**
+  ([`aisoc/agents/aisoc-governance.agent.md`](../../agents/aisoc-governance.agent.md))
+  to catch RICTOC/schema/portability/HITL mismatches early. It complements
+  these checks — it does not replace them, and it does not grade.
 
 ### Universal schema check (applies to every agent)
 
