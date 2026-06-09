@@ -14,6 +14,9 @@ agent they own, and give graders an identical checklist to score against.
 
 ## How to use this worksheet
 
+- **New to findings?** Read
+  [How to Read a Finding](../guides/reading-a-finding.md) first — it annotates
+  the 8-key schema (and the U1–U6 checks below) on synthetic, non-graded data.
 - **One worksheet per student.** Print or copy the section for the agent
   number you were assigned.
 - **Fill it during the testing & hardening phase.** Each "Pass check" must

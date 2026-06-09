@@ -19,6 +19,8 @@ markdown prompt files. Treat them as software: precise, versioned, reviewable.
   - `aisoc/docs/project-proposal/` — the timeline-neutral `proposal.md`, the
     `delivery-plan.md` (selectable 3-week / 6-week schedules), `test-worksheet.md`,
     and `glossary.md`.
+  - `aisoc/docs/guides/` — teaching aids on synthetic (non-graded) data, e.g.
+    `reading-a-finding.md`, an annotated walk-through of the 8-key finding.
 - **Wrappers (sugar only): `.claude/` and `.github/`.** These load the canonical
   `aisoc/` files. They must never alter agent behaviour.
 
