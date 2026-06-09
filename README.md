@@ -89,8 +89,9 @@ intent than type a slash command.
 
 ```text
 aisoc/                              # Canonical source of truth (vendor-neutral)
-├── agents/                          # Orchestrator reference + 20 catalogue agents + RICTOC template
+├── agents/                          # Orchestrator + Governance meta-agents + 20 catalogue agents + RICTOC template
 │   ├── aisoc-orchestrator.agent.md  #   reference RICTOC for the Orchestrator role
+│   ├── aisoc-governance.agent.md    #   advisory conformance reviewer — self-check before submitting
 │   ├── _rictoc-template.agent.md    #   blank skeleton — copy this to start your agent
 │   ├── 03-dns-sentinel.agent.md     #   the one complete worked example
 │   └── NN-<short-name>.agent.md     #   student-authored stubs (01, 02, 04 … 20)

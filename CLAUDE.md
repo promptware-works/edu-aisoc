@@ -14,6 +14,9 @@ markdown prompt files. Treat them as software: precise, versioned, reviewable.
     `03-dns-sentinel.agent.md` is the complete worked example; `_rictoc-template.agent.md`
     is the blank skeleton.
   - `aisoc/agents/aisoc-orchestrator.agent.md` — reference RICTOC for the Orchestrator role.
+  - `aisoc/agents/aisoc-governance.agent.md` — meta-agent: an **advisory** conformance
+    reviewer students paste with a candidate prompt to self-check it against the criteria
+    (RICTOC, 8-key schema, catalogue, portability, safety/HITL). Never grades or blocks.
   - `aisoc/schema/finding.json` — the shared 8-key finding schema all agents emit.
   - `aisoc/scenarios/` — reference scenarios for end-to-end testing.
   - `aisoc/docs/project-proposal/` — the timeline-neutral `proposal.md`, the

@@ -207,8 +207,9 @@ into a fresh chat session.
 
 ```text
 aisoc/
-├── agents/                              # 22 agent prompts (orchestrator + 20 catalogue + room to grow)
+├── agents/                              # orchestrator + governance + 20 catalogue + template
 │   ├── aisoc-orchestrator.agent.md      # RICTOC reference for the Orchestrator role
+│   ├── aisoc-governance.agent.md        # meta: advisory conformance reviewer (self-check)
 │   ├── 01-traffic-analyzer.agent.md     # one per catalogue entry
 │   ├── 02-ids-triage.agent.md
 │   ├── 03-dns-sentinel.agent.md         # worked example (complete)
@@ -444,6 +445,16 @@ agent are:
 > no student sits on the critical path of the whole farm. An advanced
 > student may *additionally* propose an alternative Orchestrator as an
 > extension — graded separately.
+>
+> **Governance note.** A second instructor-provided meta-agent, the
+> **Governance Reviewer**
+> ([`aisoc/agents/aisoc-governance.agent.md`](../../agents/aisoc-governance.agent.md)),
+> is an **advisory** pre-submission linter: paste it with your candidate
+> agent prompt to check RICTOC completeness, the 8-key schema, catalogue
+> alignment, portability, and the safety/HITL gate before you open your
+> PR. It never grades and never blocks — the human grader and oral
+> defense remain authoritative — and it is not one of the 20 student
+> slots.
 
 ### 7.1 Suggested allocation procedure
 
