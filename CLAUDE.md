@@ -47,9 +47,13 @@ mutations during operation — only chat text.
 - `/aisoc-boot` — boot only.
 - `/aisoc-catalogue` — register the catalogue only.
 - `/aisoc-agent <N>` — print agent `#N`'s prompt verbatim for dispatch.
+- `/aisoc-governance` — run the advisory Governance Reviewer on a candidate
+  agent prompt (RICTOC / schema / catalogue / portability / safety self-check).
 
-The same boot/catalogue/init wrappers also exist as auto-discovered skills under
-`.claude/skills/` (`aisoc-init`, `aisoc-boot`, `aisoc-catalogue`).
+The same boot/catalogue/init/governance wrappers also exist as auto-discovered
+skills under `.claude/skills/` (`aisoc-init`, `aisoc-boot`, `aisoc-catalogue`,
+`aisoc-governance`). Copilot equivalents live under `.github/` (`agents/`,
+`prompts/`, `chatmodes/`).
 
 Do **not** auto-adopt the Orchestrator role on every message. Adopt it only when
 the user runs `/aisoc-init` (or `/aisoc-boot`) or explicitly asks to start the farm.
