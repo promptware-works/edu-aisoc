@@ -129,3 +129,11 @@ and study the worked example at
 Every agent returns a single JSON object with the shared eight keys defined in
 [`aisoc/schema/finding.json`](aisoc/schema/finding.json): `agent`, `summary`,
 `severity`, `confidence`, `evidence`, `attck`, `recommendation`, `rationale`.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE) — © 2026 D. Maxios. You are free to
+use, adapt, and redistribute these prompts (including for teaching) provided the
+copyright notice and permission notice are retained.
